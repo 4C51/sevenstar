@@ -1,0 +1,34 @@
+{
+  "stances": {
+    "Orange Belt": ["Horse Stance", "Forward Stance", "Modern Cat Stance (Short, Medium, and Long)", "Fighting Stance", "Eight Stance", "Extended Forward Stance"],
+    "Purple Belt": ["Twisted Horse Stance", "Crane Stance", "Drop Stance", "Kempo Stance (Toe-in)"],
+    "Blue Belt": ["Classical Cat Stance (Short, Medium, and Long)", "Boxer Stance", "Natural Stance (Back Stance)"],
+    "Green Belt": ["Glass Horse Stance", "Reverse Glass Horse Stance", "Side Drop Stance"],
+    "Brown Belt": ["Seven Star Stance", "Dragon Stance", "Wun Hop Kuen Do Drop Stance"],
+    "Black Belt": ["Three Point Stance"]
+  },
+  "handStrikes": {
+    "Orange Belt": ["Full Twisting Punch", "Reverse Punch", "Back Knuckle Strike", "Back Fist Strike", "Bottom Fist Strike", "Vertical Punch", "Elbow Strike", "Elbow Smash", "Spear Hand Strike", "Spear Hand Thrust", "Palm Heel Strike"],
+    "Purple Belt": ["V-Hand Strike", "Roundhouse Punch", "Hook Punch (Upper Cut)", "Side to Side Punch", "Eight Knuckle Punch", "Shoto Chop", "Double Punch"],
+    "Blue Belt": ["Double Back Knuckle Strike", "Tiger Claw", "Ridge Hand Strike", "Peacock Strike", "Bear Claw", "Spear Hand Rake", "“U” Punch"],
+    "Green Belt": ["Palm Fist Strike", "Shoto Chop Short", "Shoto Chop Long", "Leopard’s Paw (Fore Knuckle Punch)", "Forearm Strike"],
+    "Brown Belt": ["Upward Slap", "Rising Punch", "Kempo Punch", "Up Vertical Punch", "Down Vertical Punch", "Ear Slap"],
+    "Black Belt": ["One Hand Slap", "Back Hand Slap", "One Knuckle Punch", "Two Knuckle Punch", "Mid-Knuckle Punch", "Dropping Punch", "Ripping Punch", "Thumb Up Punch", "One Finger Poke", "Whipping Hand Strike", "Twist-Out Punch", "Head Butt", "Upside Down Punch"]
+  },
+  "blocks": {
+    "Orange Belt": ["Outward Block", "Inward Block", "Upward Block", "Downward Block", "Brush Block", "Upper Cross Block", "Lower Cross Block", "Bottom Fist Block"],
+    "Purple Belt": ["Peacock Block", "Extended Outward Block", "Shooting Star Block", "Extended Inward Block", "Open Hand Inward Block", "Extended Ridge Hand Block", "Open Hand Upward Block", "Palm Heel Block"],
+    "Blue Belt": ["Palm Fist Block", "Outward Arc Block", "Knife Hand Block", "Wedge Block", "Scroll Block 1", "Scroll Block 2", "Scroll Block 3"],
+    "Green Belt": ["Back Fist Block", "Open Hand Downward Block", "Hook Block", "Ridge Hand Block", "Forearm Block", "Double Forearm Block"],
+    "Brown Belt": ["Hanging Elbow Block", "Elbow Block", "Punch Block", "Shield Block"],
+    "Black Belt": ["Upper Elbow Block", "Scissor Block", "Mantis Block"]
+  },
+  "kicks": {
+    "Orange Belt": ["Front Snap Kick", "Front Thrust Kick", "Side Thrust Kick", "Roundhouse Snap Kick", "Roundhouse Thrust Kick", "Back Thrust Kick", "Butterfly Kick"],
+    "Purple Belt": ["Back Snap Kick", "Inside Crescent Kick", "Outside Crescent Kick", "Kempo Snap Kick", "Hook Kick"],
+    "Blue Belt": ["Side Snap Kick", "Side Stomp Kick", "Kempo Thrust Kick", "Heel Kick", "Knee Strike", "Football Kick", "Spinning Back Snap and Thrust Kicks", "Spinning Side Thrust Kick"],
+    "Green Belt": ["Inward Axe Kick", "Outward Axe Kick", "Spinning Hook Kick", "Jumping Front Snap and Thrust Kicks", "Jumping Roundhouse Snap and Thrust Kicks", "Spinning Roundhouse Snap and Thrust Kicks"],
+    "Brown Belt": ["Wheel Kick (Spinning Heel Kick)", "Jumping Side Snap and Thrust Kick", "Rising Side Thrust Kick", "Funny Kick", "Jump Spinning Crescent Kick (Inside)", "Drop Kick", "Skip Kick", "Back Toe Kick", "Back Heel Kick"],
+    "Black Belt": ["Jump Spinning Back Snap and Thrust Kicks", "Jump Spinning Roundhouse Snap and Thrust Kicks", "Tiger Tail Kick", "Double Front Kick", "Scissor Kick", "Low Toe-Out Heel Kick", "Donkey Kick", "Jump Spinning Crescent Kick (Outside)", "Front Toe Hook Kick", "Upward Slap Kick", "Single Si Lum Front Kick"]
+  }
+}
