@@ -1,11 +1,11 @@
 // script.js
 const beltRanks = [
+    'White Belt',
     'Orange Belt',
     'Purple Belt',
     'Blue Belt',
     'Green Belt',
-    'Brown Belt',
-    'Black Belt'
+    'Brown Belt'
 ];
 
 let basics = {};
