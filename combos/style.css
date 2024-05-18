@@ -32,3 +32,14 @@ button {
 #settings {
     margin-top: 20px;
 }
+
+#settings label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#settings select,
+#settings input {
+    padding: 5px;
+    font-size: 16px;
+}
