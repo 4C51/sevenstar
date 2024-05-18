@@ -1,8 +1,8 @@
 {
   "stances": {
-    "White Belt": ["Horse Stance", "Forward Stance", "Modern Cat Stance (Short, Medium, and Long)", "Fighting Stance", "Eight Stance", "Extended Forward Stance"],
-    "Orange Belt": ["Twisted Horse Stance", "Crane Stance", "Drop Stance", "Kempo Stance (Toe-in)"],
-    "Purple Belt": ["Classical Cat Stance (Short, Medium, and Long)", "Boxer Stance", "Natural Stance (Back Stance)"],
+    "White Belt": ["Horse Stance", "Forward Stance", "Modern Cat Stance (Short, Medium, and Long)", "Tiger Stance", "Extended Forward Stance"],
+    "Orange Belt": ["Twisted Horse Stance", "Drop Stance", "Crane Stance", "Kempo Stance (Toe-in)"],
+    "Purple Belt": ["Classical Cat Stance (Short, Medium, and Long)", "Boxer Stance", "Natural Stance"],
     "Blue Belt": ["Glass Horse Stance", "Reverse Glass Horse Stance", "Side Drop Stance"],
     "Green Belt": ["Seven Star Stance", "Dragon Stance", "Wun Hop Kuen Do Drop Stance"],
     "Brown Belt": ["Three Point Stance"]
@@ -20,8 +20,8 @@
     "Orange Belt": ["Peacock Block", "Extended Outward Block", "Shooting Star Block", "Extended Inward Block", "Open Hand Inward Block", "Extended Ridge Hand Block", "Open Hand Upward Block", "Palm Heel Block"],
     "Purple Belt": ["Palm Fist Block", "Outward Arc Block", "Knife Hand Block", "Wedge Block", "Scroll Block 1", "Scroll Block 2", "Scroll Block 3"],
     "Blue Belt": ["Back Fist Block", "Open Hand Downward Block", "Hook Block", "Ridge Hand Block", "Forearm Block", "Double Forearm Block"],
-    "Green Belt": ["Hanging Elbow Block", "Elbow Block", "Punch Block", "Shield Block"],
-    "Brown Belt": ["Upper Elbow Block", "Scissor Block", "Mantis Block"]
+    "Green Belt": ["Back Fist Block", "Open Hand Downward Block", "Hook Block", "Ridge Hand Block", "Forearm Block", "Double Forearm Block"],
+    "Brown Belt": ["Hanging Elbow Block", "Elbow Block", "Punch Block", "Shield Block"]
   },
   "kicks": {
     "White Belt": ["Front Snap Kick", "Front Thrust Kick", "Side Thrust Kick", "Roundhouse Snap Kick", "Roundhouse Thrust Kick", "Back Thrust Kick", "Butterfly Kick"],
