@@ -1,4 +1,13 @@
 // script.js
+const beltRanks = [
+    'Orange Belt',
+    'Purple Belt',
+    'Blue Belt',
+    'Green Belt',
+    'Brown Belt',
+    'Black Belt'
+];
+
 let basics = {};
 
 fetch('basics.json')
@@ -12,13 +21,14 @@ document.getElementById('generate-btn').addEventListener('click', generateCombo)
 
 function generateCombo() {
     const comboLength = parseInt(document.getElementById('combo-length').value);
+    const selectedBeltRank = document.getElementById('belt-rank').value;
     const types = ['stances', 'handStrikes', 'blocks', 'kicks'];
     const combo = [];
 
     for (let i = 0; i < comboLength; i++) {
         const randomType = types[Math.floor(Math.random() * types.length)];
-        const beltRanks = Object.keys(basics[randomType]);
-        const randomBeltRank = beltRanks[Math.floor(Math.random() * beltRanks.length)];
+        const availableBeltRanks = beltRanks.slice(0, beltRanks.indexOf(selectedBeltRank) + 1);
+        const randomBeltRank = availableBeltRanks[Math.floor(Math.random() * availableBeltRanks.length)];
         const techniques = basics[randomType][randomBeltRank];
         const randomTechnique = techniques[Math.floor(Math.random() * techniques.length)];
         combo.push(randomTechnique);
