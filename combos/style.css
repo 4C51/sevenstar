@@ -39,7 +39,22 @@ button {
 }
 
 #settings select,
-#settings input {
+#settings input[type="range"] {
     padding: 5px;
     font-size: 16px;
+}
+
+#combo-length-display {
+    font-weight: bold;
+}
+
+#loading-indicator {
+    font-size: 16px;
+    color: #888;
+}
+
+#error-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
 }
