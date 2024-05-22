@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const increasing = event.target.classList.contains('increase');
           increasing ? value++ : value--;
 
-          const min = 0; //type.startsWith('min') ? 0 : parseInt(document.getElementById(type.replace('max', 'min')).value);
-          const max = comboLengthSlider.value; // type.startsWith('max') ? comboLengthSlider.value : parseInt(document.getElementById(type.replace('min', 'max')).value);
+          const min = 0;
+          const max = MAX_TECH_LENGTH;
 
           if (value >= min && value <= max) {
               input.value = value;
@@ -57,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
   darkModeToggle.addEventListener('change', () => {
       document.body.classList.toggle('dark-mode');
       saveDarkModePreference();
+  });
+
+  document.getElementById('reset-settings').addEventListener('click', () => {
+    clearSettings();
+    window.location = window.location;
   });
 });
 
@@ -112,7 +117,7 @@ function validateMinMaxSettings(type, increasing) {
   const comboLength = parseInt(document.getElementById('combo-length').value);
   const totalMin = getTotalMinTechniques();
   const totalMax = getTotalMaxTechinques();
-  
+
   if (totalMin > comboLength) {
     displayError(`Minimum technique requirements (${totalMin}) are ABOVE current combo length of ${comboLength}.`);
   } else if (totalMax < comboLength) {
@@ -132,13 +137,14 @@ function adjustMinMax(minId, maxId, comboLength) {
   const maxInput = document.getElementById(maxId);
 
   if (parseInt(minInput.value) > parseInt(maxInput.value)) {
-      maxInput.value = minInput.value;
+    maxInput.value = minInput.value;
   } else if (parseInt(maxInput.value) < parseInt(minInput.value)) {
-      minInput.value = maxInput.value;
+    minInput.value = maxInput.value;
+  } else if (parseInt(maxInput.value) > MAX_TECH_LENGTH) {
+    maxInput.value = MAX_TECH_LENGTH;
   }
 
   minInput.max = comboLength;
-  maxInput.max = comboLength;
 }
 
 function saveSettings() {
@@ -186,4 +192,8 @@ function loadSettings() {
       cb.checked = settings.beltRanks[cb.value];
       cb.disabled = $sevenStar.beltRanks.indexOf(cb.value) > $sevenStar.beltRanks.indexOf(settings.beltRank);
   });
+}
+
+function clearSettings() {
+  localStorage.setItem('kajukenboSettings', null);
 }

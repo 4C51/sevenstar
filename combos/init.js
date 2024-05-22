@@ -19,6 +19,8 @@ $sevenStar.beltIcons = {
     'Brown Belt': '🟤'
 };
 
+const MAX_TECH_LENGTH = 7;
+
 document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading-indicator');
     loadingIndicator.style.display = 'block';
