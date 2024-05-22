@@ -1,6 +1,6 @@
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "scriptorama-markdown-jf", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,4 +57,41 @@ button {
     margin-top: 10px;
     font-size: 14px;
     color: red;
+}
+
+#advanced-options {
+    margin-top: 20px;
+}
+
+.technique-sliders label,
+.belt-rank-checks label {
+    display: block;
+    margin: 5px 0;
+}
+
+.range-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.range-inputs button {
+    padding: 5px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.range-inputs input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+.range-inputs label {
+    font-size: smaller;
+    position: relative;
+    margin-bottom: -24px;
+    top: -24px;
 }

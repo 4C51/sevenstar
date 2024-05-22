@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kajukenbo Combo Randomizer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pyi7rde.css">
 </head>
 <body>
     <div class="container">
@@ -16,7 +16,7 @@
         <div id="error-message" style="display: none; color: red;"></div>
         <div id="settings">
             <label for="combo-length">Combo Length: <span id="combo-length-display">4</span></label>
-            <input type="range" id="combo-length" value="4" min="2" max="7">
+            <input type="range" id="combo-length" value="3" min="1" max="7">
             <label for="belt-rank">Belt Rank:</label>
             <select id="belt-rank">
                 <option value="White Belt">⚪ White Belt</option>
@@ -26,6 +26,79 @@
                 <option value="Green Belt">🟢 Green Belt</option>
                 <option value="Brown Belt">🟤 Brown Belt</option>
             </select>
+        </div>
+        <button id="toggle-advanced-options">Advanced Options</button>
+        <div id="advanced-options" style="display: none;">
+            <div class="technique-sliders">
+                <label>Stances</label>
+                <div class="range-inputs">
+                    <button class="decrease" data-type="min-stances">-</button>
+                    <div>
+                        <label for="min-stances">Min</label>
+                        <input type="number" id="min-stances" min="0" max="3" value="0">
+                    </div>
+                    <button class="increase" data-type="min-stances">+</button>
+                    <button class="decrease" data-type="max-stances">-</button>
+                    <div>
+                        <label for="min-stances">Max</label>
+                        <input type="number" id="max-stances" min="0" max="3" value="3">
+                    </div>
+                    <button class="increase" data-type="max-stances">+</button>
+                </div>
+                <label>Hand Strikes</label>
+                <div class="range-inputs">
+                    <button class="decrease" data-type="min-hand-strikes">-</button>
+                    <div>
+                        <label for="min-stances">Min</label>
+                        <input type="number" id="min-hand-strikes" min="0" max="3" value="0">
+                    </div>
+                    <button class="increase" data-type="min-hand-strikes">+</button>
+                    <button class="decrease" data-type="max-hand-strikes">-</button>
+                    <div>
+                        <label for="min-stances">Max</label>
+                        <input type="number" id="max-hand-strikes" min="0" max="3" value="3">
+                    </div>
+                    <button class="increase" data-type="max-hand-strikes">+</button>
+                </div>
+                <label>Blocks</label>
+                <div class="range-inputs">
+                    <button class="decrease" data-type="min-blocks">-</button>
+                    <div>
+                        <label for="min-stances">Min</label>
+                        <input type="number" id="min-blocks" min="0" max="3" value="0">
+                    </div>
+                    <button class="increase" data-type="min-blocks">+</button>
+                    <button class="decrease" data-type="max-blocks">-</button>
+                    <div>
+                        <label for="min-stances">Max</label>
+                        <input type="number" id="max-blocks" min="0" max="3" value="3">
+                    </div>
+                    <button class="increase" data-type="max-blocks">+</button>
+                </div>
+                <label>Kicks</label>
+                <div class="range-inputs">
+                    <button class="decrease" data-type="min-kicks">-</button>
+                    <div>
+                        <label for="min-stances">Min</label>
+                        <input type="number" id="min-kicks" min="0" max="3" value="0">
+                    </div>
+                    <button class="increase" data-type="min-kicks">+</button>
+                    <button class="decrease" data-type="max-kicks">-</button>
+                    <div>
+                        <label for="min-stances">Max</label>
+                        <input type="number" id="max-kicks" min="0" max="3" value="3">
+                    </div>
+                    <button class="increase" data-type="max-kicks">+</button>
+                </div>
+            </div>
+            <div class="belt-rank-checks">
+                <label><input type="checkbox" class="belt-rank-check" value="White Belt" checked>⚪ White Belt</label>
+                <label><input type="checkbox" class="belt-rank-check" value="Orange Belt" checked>🟠 Orange Belt</label>
+                <label><input type="checkbox" class="belt-rank-check" value="Purple Belt" checked>🟣 Purple Belt</label>
+                <label><input type="checkbox" class="belt-rank-check" value="Blue Belt" checked>🔵 Blue Belt</label>
+                <label><input type="checkbox" class="belt-rank-check" value="Green Belt" checked>🟢 Green Belt</label>
+                <label><input type="checkbox" class="belt-rank-check" value="Brown Belt" checked>🟤 Brown Belt</label>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
