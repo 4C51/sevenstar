@@ -52,6 +52,17 @@ function generateCombo() {
         kicks: { min: parseInt(document.getElementById('min-kicks').value), max: parseInt(document.getElementById('max-kicks').value) }
     };
 
+    const totalMin = getTotalMinTechniques();
+    const totalMax = getTotalMaxTechinques();
+
+    if (totalMin > comboLength) {
+      displayError(`Minimum technique requirements (${totalMin}) are ABOVE current combo length of ${comboLength}.`);
+    return;
+    } else if (totalMax < comboLength) {
+      displayError(`Maximum technique requirements (${totalMax}) are BELOW current combo length of ${comboLength}.`);
+    return;
+    }
+
     const comboOptions = new ComboOptions(comboLength, selectedBeltRanks, techniqueLimits);
     const combo = new Combo(comboOptions);
 

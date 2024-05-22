@@ -84,6 +84,22 @@ function enableBeltRanks() {
   saveSettings();
 }
 
+function getTotalMinTechniques() {
+  const minStances = parseInt(document.getElementById('min-stances').value);
+  const minHandStrikes = parseInt(document.getElementById('min-hand-strikes').value);
+  const minBlocks = parseInt(document.getElementById('min-blocks').value);
+  const minKicks = parseInt(document.getElementById('min-kicks').value);
+  return minStances + minHandStrikes + minBlocks + minKicks;
+}
+
+function getTotalMaxTechinques() {
+  const maxStances = parseInt(document.getElementById('max-stances').value);
+  const maxHandStrikes = parseInt(document.getElementById('max-hand-strikes').value);
+  const maxBlocks = parseInt(document.getElementById('max-blocks').value);
+  const maxKicks = parseInt(document.getElementById('max-kicks').value);
+  return maxStances + maxHandStrikes + maxBlocks + maxKicks;
+}
+
 function validateMinMaxSettings(type, increasing) {
   if (type && type.startsWith('max') && !increasing) {
       const minInput = document.getElementById(type.replace('max', 'min'));
@@ -94,16 +110,15 @@ function validateMinMaxSettings(type, increasing) {
   }
 
   const comboLength = parseInt(document.getElementById('combo-length').value);
-  const minStances = parseInt(document.getElementById('min-stances').value);
-  const minHandStrikes = parseInt(document.getElementById('min-hand-strikes').value);
-  const minBlocks = parseInt(document.getElementById('min-blocks').value);
-  const minKicks = parseInt(document.getElementById('min-kicks').value);
-  const totalMin = minStances + minHandStrikes + minBlocks + minKicks;
-
+  const totalMin = getTotalMinTechniques();
+  const totalMax = getTotalMaxTechinques();
+  
   if (totalMin > comboLength) {
-      displayError('Impossible to fulfill the minimum requirements with the selected combo length.');
+    displayError(`Minimum technique requirements (${totalMin}) are ABOVE current combo length of ${comboLength}.`);
+  } else if (totalMax < comboLength) {
+    displayError(`Maximum technique requirements (${totalMax}) are BELOW current combo length of ${comboLength}.`);
   } else {
-      clearError();
+    clearError();
   }
 
   adjustMinMax('min-stances', 'max-stances', comboLength);
