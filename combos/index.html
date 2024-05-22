@@ -15,7 +15,11 @@
     <div class="container">
         <h1>Kajukenbo Combo Randomizer</h1>
         <button id="generate-btn">Generate Combo</button>
-        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        <label class="switch">
+            <span class="switch-label">Dark Mode</span>
+            <input type="checkbox" id="toggle-dark-mode">
+            <span class="slider round"></span>
+        </label>
         <div id="loading-indicator" style="display: none;">Loading...</div>
         <div id="combo-display"></div>
         <div id="error-message" style="display: none; color: red;"></div>

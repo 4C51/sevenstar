@@ -56,9 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
       checkbox.addEventListener('change', saveSettings);
   });
 
-  document.getElementById('toggle-dark-mode').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    saveDarkModePreference();
+  const darkModeToggle = document.getElementById('toggle-dark-mode');
+  darkModeToggle.checked = document.body.classList.contains('dark-mode');
+  darkModeToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+      saveDarkModePreference();
   });
 });
 
