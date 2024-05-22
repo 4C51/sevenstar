@@ -71,7 +71,7 @@ class Combo {
             const technique = this.library.getRandomTechnique(this.#techniques, this.#maxedTypes);
             this.#techniques.add(technique);
 
-            const typeCount = this.#techniques.values().filter(t => t.type === technique.type).toArray().length;
+            const typeCount = [...this.#techniques.values()].filter(t => t.type === technique.type).length;
             const typeMax = this.#options.limits[technique.type].max;
             if (typeCount >= typeMax) {
                 this.#maxedTypes.add(technique.type);
@@ -80,7 +80,7 @@ class Combo {
     }
 
     getHtmlElements() {
-        return this.#techniques.values().map(technique => {
+        return [...this.#techniques.values()].map(technique => {
             const techniqueEl = document.createElement('div');
             techniqueEl.textContent = technique;
             return techniqueEl
