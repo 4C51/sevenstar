@@ -41,10 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (value >= min && value <= max) {
               input.value = value;
-          } else if (value > max) {
-              input.value = max;
-          } else {
-              input.value = min;
           }
 
           validateMinMaxSettings(type, increasing);
@@ -92,7 +88,9 @@ function validateMinMaxSettings(type, increasing) {
   if (type && type.startsWith('max') && !increasing) {
       const minInput = document.getElementById(type.replace('max', 'min'));
       const maxInput = document.getElementById(type);
-      minInput.value = maxInput.value;
+      if (minInput.value > maxInput.value) {
+        minInput.value = maxInput.value;
+      }
   }
 
   const comboLength = parseInt(document.getElementById('combo-length').value);

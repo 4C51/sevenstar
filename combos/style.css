@@ -18,9 +18,11 @@ body.dark-mode {
     text-align: center;
     background: white;
     padding: 20px;
+    margin: auto 0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    padding-bottom: 40px;
 }
 
 .container h1 {
@@ -172,4 +174,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+#feedback {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
 }
